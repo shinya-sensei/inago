@@ -23,7 +23,7 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 40px 20px;
         }
@@ -60,8 +60,8 @@
         .video-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 20px;
-            margin-bottom: 40px;
+            gap: 25px;
+            margin-bottom: 50px;
         }
 
         @media (min-width: 600px) {
@@ -75,7 +75,7 @@
             border-radius: 8px;
             overflow: hidden;
             border: 1px solid #333;
-            transition: transform 0.2s, border-color 0.2s;
+            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
             display: flex;
             flex-direction: column;
         }
@@ -83,6 +83,7 @@
         .video-card:hover {
             transform: translateY(-5px);
             border-color: var(--accent-color);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.1);
         }
 
         .video-link {
@@ -93,15 +94,19 @@
             flex-direction: column;
         }
 
-        .video-thumbnail-placeholder {
-            background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+        .thumbnail-container {
+            position: relative;
+            width: 100%;
             aspect-ratio: 16 / 9;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--accent-color);
-            font-weight: bold;
-            font-size: 1.2rem;
+            background-color: #000;
+            overflow: hidden;
+        }
+
+        .thumbnail-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .video-info {
@@ -175,7 +180,9 @@
                     
                     <div class="video-card">
                         <a href="https://youtu.be/NOko1UziCog" target="_blank" class="video-link">
-                            <div class="video-thumbnail-placeholder">Part 1</div>
+                            <div class="thumbnail-container">
+                                <img src="https://img.youtube.com/vi/NOko1UziCog/maxresdefault.jpg" alt="Part1 サムネイル">
+                            </div>
                             <div class="video-info">
                                 <div class="video-title">第1部</div>
                                 <div class="video-sub">YouTubeで視聴する</div>
@@ -185,7 +192,9 @@
 
                     <div class="video-card">
                         <a href="https://youtu.be/0TaBqNIpvzw" target="_blank" class="video-link">
-                            <div class="video-thumbnail-placeholder">Part 2</div>
+                            <div class="thumbnail-container">
+                                <img src="https://img.youtube.com/vi/0TaBqNIpvzw/maxresdefault.jpg" alt="Part2 サムネイル">
+                            </div>
                             <div class="video-info">
                                 <div class="video-title">第2部</div>
                                 <div class="video-sub">YouTubeで視聴する</div>
@@ -195,7 +204,9 @@
 
                     <div class="video-card">
                         <a href="https://youtu.be/ROEH23mL5dU" target="_blank" class="video-link">
-                            <div class="video-thumbnail-placeholder">Part 3</div>
+                            <div class="thumbnail-container">
+                                <img src="https://img.youtube.com/vi/ROEH23mL5dU/maxresdefault.jpg" alt="Part3 サムネイル">
+                            </div>
                             <div class="video-info">
                                 <div class="video-title">第3部</div>
                                 <div class="video-sub">YouTubeで視聴する</div>
@@ -211,17 +222,4 @@
                 <div class="resources-box">
                     <p style="margin: 0 0 10px 0;">セミナーで使用したスライド、および各種共有ファイルは下記に集約しています。</p>
                     <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0 0 20px 0;">（外部ストレージ：Dropboxへ遷移します）</p>
-                    <a href="https://www.dropbox.com/scl/fo/ik3uh5dqsqs92k8i1uii0/ALmihK_8vgr0od51npI7IaI?rlkey=u04eks7967p2g1j1brgqevbyv&st=lpbl6qfj&dl=0" target="_blank" class="btn-shared">
-                        共有フォルダを開く
-                    </a>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            &copy; 2026 Inner Beauty Seminar. All Rights Reserved.
-        </footer>
-    </div>
-
-</body>
-</html>
+                    <a href="
